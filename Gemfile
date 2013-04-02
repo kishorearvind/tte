@@ -1,4 +1,4 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
 gem 'rails', '3.2.11'
 
@@ -6,7 +6,7 @@ gem 'rails', '3.2.11'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3'
-
+gem 'nokogiri', '~>1.5.9'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -37,3 +37,14 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'debugger'
 gem 'puma'
+# gem "bundler", "~> 1.3.4"
+# gem 'debugger'
+group :test, :development do
+	gem 'rspec-rails'
+end
+
+group :test do
+	gem 'cucumber-rails'
+	gem 'capybara'
+	gem 'database_cleaner'
+end
